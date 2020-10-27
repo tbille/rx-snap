@@ -27,6 +27,7 @@ parts:
       - libx11-dev
       - libxrandr-dev
       - libxinerama-dev
+      - libxcursor
     stage-packages:
       - libglu1-mesa
       - libgl1-mesa-dri
