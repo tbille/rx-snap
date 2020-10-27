@@ -35,10 +35,7 @@ parts:
 apps:
   rx:
     command: bin/desktop-launch $SNAP/bin/rx
-    desktop: usr/share/applications/rx.desktop
     plugs:
       - x11
       - opengl
       - home
-      - desktop
-      - desktop-legacy
