@@ -24,10 +24,7 @@ parts:
       - gcc-multilib
       - cmake
       - make
-      - libx11-dev
-      - libxrandr-dev
-      - libxinerama-dev
-      - libxcursor1
+      - xorg-dev
     stage-packages:
       - libglu1-mesa
       - libgl1-mesa-dri
