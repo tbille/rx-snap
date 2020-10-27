@@ -1,0 +1,28 @@
+name: rx
+version: 'v0.4.0'
+summary: rx is a modern and minimalist pixel editor.
+description: |
+  rx is an extensible, modern and minimalist pixel editor, designed with great care and love for artists and hackers. It was conceived to have as little UI as possible, and instead focus on the work.
+
+  To achieve this, rx takes inspiration from vi's modal nature and is built around a command system, unique to tools of its kind.
+
+base: core20
+
+parts:
+  rx:
+    plugin: rust
+    source: https://github.com/cloudhead/rx.git
+    build-packages:
+      - gcc-multilib
+      - cmake
+      - make
+    stage-packages:
+      - libgl1-mesa-dri
+      - libgl1-mesa-glx
+
+apps:
+  rx:
+    command: bin/rx
+    plugs:
+      - x11
+      - opengl
