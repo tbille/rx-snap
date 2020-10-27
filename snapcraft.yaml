@@ -9,6 +9,14 @@ description: |
 base: core20
 
 parts:
+  desktop-glib-only:
+    source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
+    source-subdir: glib-only
+    plugin: make
+    build-packages:
+      - libglib2.0-dev
+    stage-packages:
+      - libglib2.0-bin
   rx:
     plugin: rust
     source: https://github.com/cloudhead/rx.git
@@ -17,8 +25,11 @@ parts:
       - cmake
       - make
     stage-packages:
+      - libglu1-mesa
       - libgl1-mesa-dri
       - libgl1-mesa-glx
+    after:
+      - desktop-glib-only
 
 apps:
   rx:
