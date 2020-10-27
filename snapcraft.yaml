@@ -25,6 +25,7 @@ parts:
       - cmake
       - make
       - libx11-dev
+      - libxrandr-dev
     stage-packages:
       - libglu1-mesa
       - libgl1-mesa-dri
