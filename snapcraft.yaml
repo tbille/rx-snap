@@ -33,9 +33,8 @@ parts:
 
 apps:
   rx:
-    command: bin/rx
+    command: bin/desktop-launch $SNAP/bin/rx
     plugs:
       - x11
       - opengl
-      - desktop
-      - unity7
+      - home
